@@ -12,7 +12,7 @@
     <div class="user">
       <p class="user_name">佐藤さん、こんにちは</p>
       <form class="logout_form" action="logout.html" method="get">
-        <button class="logout_btn" type="submit">
+        <button class="custom-btn" type="submit">
           <img src="images/ドアアイコン.png">ログアウト</button>
       </form>
     </div>
@@ -21,11 +21,11 @@
   <hr>
 
   <div class="update">
-    <div class="form_body">
+    <div class="form-body">
       <div class="img_block">
-        <img src="images/マッキー.png" class="product_img"><br>
+        <img src="images/マッキー.png" class="product-img"><br>
       </div>
-      <form action="menu.html" method="get">
+      <form action="delete" method="post">
         <fieldset class="label-130 product_block">
           <p class="error">エラーメッセージ</p>
           <div>
@@ -54,15 +54,15 @@
         </fieldset>
         <div>
           <div class="btns">
-            <input type="button" onclick="openModal()" value="削除" class="basic_btn">
-            <input type="button" onclick="location.href='./updateInput.html'" value="編集" class="basic_btn">
-            <input type="button" onclick="location.href='./menu.html'" value="戻る" class="cancel_btn">
+            <input type="button" onclick="openModal()" value="削除" class="basic-btn">
+            <input type="button" onclick="location.href='./updateInput.html'" value="編集" class="basic-btn">
+            <input type="button" onclick="location.href='./menu.html'" value="戻る" class="cancel-btn">
           </div>
           <div id="modal">
-            <p class="modal_message">削除しますか？</p>
+            <p class="modal-message">削除しますか？</p>
             <div class="btns">
-              <button type="submit" class="basic_btn">削除</button>
-              <button type="button" onclick="closeModal()" class="cancel_btn">キャンセル</button>
+              <button type="button" id="delete-btn" class="basic-btn">削除</button>
+              <button type="button" onclick="closeModal()" class="cancel-btn">キャンセル</button>
             </div>
           </div>
         </div>
@@ -70,6 +70,12 @@
     </div>
   </div>
   <div id="fadeLayer"></div>
+  <script src="./js/commons.js"></script>
+  <script>
+    'use strict'
+    document.getElementById('delete-btn').addEventListener('click', () => {
+      location.href = './menu.html'
+    })
+  </script>
 </body>
 </html>
-<script src="./js/commons.js"></script>

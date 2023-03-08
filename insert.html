@@ -12,7 +12,7 @@
     <div class="user">
       <p class="user_name">佐藤さん、こんにちは</p>
       <form class="logout_form" action="logout.html" method="get">
-        <button class="logout_btn" type="submit">
+        <button class="custom-btn" type="submit">
           <img src="images/ドアアイコン.png">ログアウト</button>
       </form>
     </div>
@@ -27,10 +27,10 @@
       </p>
     </div>
   
-    <div class="form_body">
+    <div class="form-body">
       <p class="error">エラーメッセージ</p>
   
-      <form action="menu.html" method="get">
+      <form action="insert" method="post">
         <fieldset class="label-130">
           <div>
             <label class="required">商品ID</label>
@@ -68,20 +68,26 @@
           </div>
         </fieldset>
         <div class="btns">
-          <button type="button" onclick="openModal()" class="basic_btn">登録</button>
-          <input type="button" onclick="location.href='./menu.html'" value="戻る" class="cancel_btn">
+          <button type="button" onclick="openModal()" class="basic-btn">登録</button>
+          <input type="button" onclick="location.href='./menu.html'" value="戻る" class="cancel-btn">
         </div>
         <div id="modal">
-          <p class="modal_message">登録しますか？</p>
+          <p class="modal-message">登録しますか？</p>
           <div class="btns">
-            <button type="submit" class="basic_btn">登録</button>
-            <button type="button" onclick="closeModal()" class="cancel_btn">キャンセル</button>
+            <button type="button" id="register-btn" class="basic-btn">登録</button>
+            <button type="button" onclick="closeModal()" class="cancel-btn">キャンセル</button>
           </div>
         </div>
       </form>
     </div>
   </div>
   <div id="fadeLayer"></div>
+  <script src="./js/commons.js"></script>
+  <script>
+    'use strict'
+    document.getElementById('register-btn').addEventListener('click', () => {
+      location.href = './menu.html'
+    })
+  </script>
 </body>
 </html>
-<script src="./js/commons.js"></script>
