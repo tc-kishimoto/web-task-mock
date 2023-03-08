@@ -74,8 +74,6 @@ body {
 table {
   margin: auto;
   width: 80%;
-  /* border-collapse: collapse;
-  border-spacing: 0; */
   border: none;
   table-layout: fixed;
 }
@@ -184,7 +182,6 @@ hr {
 }
 
 .btn {
-  width: 80%;
   margin: auto;
   text-align: left;
 }
@@ -363,9 +360,6 @@ h1 a {
 }
 
 .order {
-  /* width: 300px;
-  margin-left: auto;
-  margin-right: 10%; */
   margin-right: 16px;
 }
 
@@ -397,4 +391,12 @@ h1 a {
 
 .order select {
   width: 100%;
+}
+.btn-area {
+  width: 40%;
+  margin-right: auto;
+}
+
+.btn-area .btn {
+  display: inline-block;
 }
