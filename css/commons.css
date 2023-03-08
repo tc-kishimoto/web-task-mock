@@ -213,7 +213,6 @@ hr {
   border: 1px solid #999;
   display: block;
   padding: 3px 10px;
-  margin: auto;
   border-radius: 20px;
   height: 2.3em;
   width: 260px;
@@ -364,9 +363,10 @@ h1 a {
 }
 
 .order {
-  width: 300px;
+  /* width: 300px;
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: 10%; */
+  margin-right: 16px;
 }
 
 /* 編集画面 */
@@ -387,4 +387,14 @@ h1 a {
 .update .product-img {
   max-width: 250px;
   max-height: 250px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 450;
+}
+
+.order select {
+  width: 100%;
 }
